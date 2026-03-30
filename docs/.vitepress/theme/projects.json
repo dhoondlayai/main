@@ -1,0 +1,18 @@
+[
+  {
+    "type": "json",
+    "title": "artifact-json",
+    "description": "High-performance JSON library for Java 21+. Zero dependencies, full RFC 8259 support, SQL-like query engine, 8-format converter (JSON ↔ CSV, XML, YAML, Markdown), and dynamic proxy mapping.",
+    "language": "Java",
+    "link": "https://github.com/dhoondlayai/artifact-json",
+    "docsLink": "https://docs.json.devartifact.online/"
+  },
+  {
+    "type": "shield",
+    "title": "artifact-shield",
+    "description": "Reactive data firewall for AI applications built on Spring WebFlux. Intercepts and scrubs LLM prompts in real-time with deterministic PII detection. Supports OIDC, mTLS, and 10,000+ concurrent requests.",
+    "language": "Spring WebFlux",
+    "link": "https://github.com/dhoondlayai/artifact-shield",
+    "docsLink": "https://docs.shield.devartifact.online/"
+  }
+]

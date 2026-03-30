@@ -1,0 +1,295 @@
+/* ===== Light Theme Design System ===== */
+:root {
+  /* Brand Colors */
+  --vp-c-brand-1: #6d5cff;
+  --vp-c-brand-2: #5b4ae8;
+  --vp-c-brand-3: #4a38d1;
+  --vp-c-brand-soft: rgba(109, 92, 255, 0.08);
+
+  /* Background */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f8f9fc;
+  --vp-c-bg-mute: #f1f3f8;
+
+  /* Hero */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #6d5cff 0%, #a855f7 50%, #ec4899 100%);
+  --vp-home-hero-image-background-image: radial-gradient(circle, rgba(109, 92, 255, 0.12) 0%, transparent 70%);
+  --vp-home-hero-image-filter: blur(68px);
+
+  /* Nav */
+  --vp-nav-bg-color: rgba(255, 255, 255, 0.85);
+
+  /* Text */
+  --vp-c-text-1: #1e293b;
+  --vp-c-text-2: #475569;
+  --vp-c-text-3: #94a3b8;
+
+  /* Divider */
+  --vp-c-divider: #e2e8f0;
+
+  /* Button */
+  --vp-button-brand-bg: #6d5cff;
+  --vp-button-brand-hover-bg: #5b4ae8;
+  --vp-button-brand-active-bg: #4a38d1;
+  --vp-button-brand-text: #ffffff;
+
+  --vp-button-alt-bg: #f1f3f8;
+  --vp-button-alt-hover-bg: #e2e8f0;
+  --vp-button-alt-text: #475569;
+
+  /* Font */
+  --vp-font-family-base: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ===== Global Smoothing ===== */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Hero Section ===== */
+.VPHero {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.VPHero .main .name {
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.VPHero .main .text {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.VPHero .main .tagline {
+  color: #64748b;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* ===== Feature Cards (VitePress built-in) ===== */
+.VPFeature {
+  border-radius: 20px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.VPFeature::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(109, 92, 255, 0.04) 0%, rgba(168, 85, 247, 0.02) 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-6px);
+  border-color: rgba(109, 92, 255, 0.25) !important;
+  box-shadow: 0 8px 30px rgba(109, 92, 255, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+.VPFeature:hover::before {
+  opacity: 1;
+}
+
+.VPFeature .title {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+}
+
+.VPFeature .details {
+  color: #64748b !important;
+  line-height: 1.65;
+}
+
+.VPFeature .icon {
+  font-size: 1.5rem;
+}
+
+/* ===== Navigation ===== */
+.VPNav {
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+.VPNavBar .title {
+  font-weight: 700 !important;
+  color: #1e293b !important;
+}
+
+/* ===== Custom Sections ===== */
+
+/* Repositories Section */
+#repositories {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#repositories h2 {
+  color: #1e293b;
+  border: none;
+}
+
+#repositories > div:first-child p {
+  color: #64748b;
+}
+
+/* Section Header Utility */
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+  border: none;
+}
+
+.section-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* Accent underline for section headers */
+.section-header h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #6d5cff, #a855f7);
+  border-radius: 99px;
+  margin: 0.75rem auto 0;
+}
+
+/* Repo cards grid */
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.75rem;
+}
+
+/* ===== Contribute Section ===== */
+.contribute-section {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f8f9fc 0%, #f1f3f8 100%);
+  border-radius: 28px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.contribute-inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.contribute-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.contribute-section h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+  border: none;
+  letter-spacing: -0.02em;
+}
+
+.contribute-section p {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn--primary {
+  background: #6d5cff;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(109, 92, 255, 0.3);
+}
+
+.cta-btn--primary:hover {
+  background: #5b4ae8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(109, 92, 255, 0.4);
+}
+
+.cta-btn--secondary {
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.cta-btn--secondary:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+/* ===== Footer override ===== */
+.VPFooter {
+  border-top: 1px solid #e2e8f0 !important;
+  background: #f8f9fc !important;
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  color: #94a3b8 !important;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .repo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-bar {
+    gap: 2.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+}
