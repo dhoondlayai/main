@@ -1,19 +1,27 @@
 ---
 layout: home
 
+head:
+  - - meta
+    - name: title
+      content: DhoondlayAI | Enterprise-Grade Open Source Java Ecosystem
+  - - meta
+    - name: description
+      content: High-performance, developer-first open source libraries for the modern Java ecosystem. Discover artifact-json and artifact-shield for high-scale apps.
+
 hero:
   name: "DhoondlayAI"
   text: "Open Source Libraries"
   tagline: "Free, community-driven Java libraries. Use them, fork them, contribute to them."
   image:
     src: /logo.png
-    alt: dhoondlayai Logo
+    alt: DhoondlayAI Logo
   actions:
     - theme: brand
       text: Browse Libraries
       link: "#libraries"
     - theme: alt
-      text: Contribute on GitHub
+      text: GitHub Organization
       link: https://github.com/dhoondlayai
 ---
 
